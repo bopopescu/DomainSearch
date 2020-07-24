@@ -13,7 +13,7 @@
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT
 # OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-"""Tokenize DNS master file format"""
+"""Tokenize DNS main file format"""
 
 import io
 import sys
@@ -39,7 +39,7 @@ class UngetBufferFull(dns.exception.DNSException):
     pass
 
 class Token(object):
-    """A DNS master file format token.
+    """A DNS main file format token.
 
     @ivar ttype: The token type
     @type ttype: int
@@ -148,7 +148,7 @@ class Token(object):
             raise IndexError
 
 class Tokenizer(object):
-    """A DNS master file format tokenizer.
+    """A DNS main file format tokenizer.
 
     A token is a (type, value) tuple, where I{type} is an int, and
     I{value} is a string.  The valid types are EOF, EOL, WHITESPACE,
